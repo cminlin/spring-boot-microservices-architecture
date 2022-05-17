@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rtmart</groupId>
-	<artifactId>config</artifactId>
+	<artifactId>discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>config</name>
-	<description>Demo project for Spring Cloud Config Server</description>
+	<name>discovery</name>
+	<description>Demo project for Spring Cloud Eureka Discovery Server</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.2</spring-cloud.version>
@@ -20,18 +20,17 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -54,4 +53,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
